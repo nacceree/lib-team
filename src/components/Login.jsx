@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
-import "../assets/css/Login.css"
-import logowa from "../assets/images/logowa.png"
-
+import "../assets/css/Login.css";
+import logowa from "../assets/images/logowa.png";
 
 const Login = () => {
   const [inputUsername, setInputUsername] = useState("");
@@ -15,23 +14,27 @@ const Login = () => {
     event.preventDefault();
     setLoading(true);
     await delay(500);
-    console.log(`Username :${inputUsername}, Password :${inputPassword}`);
-    if (inputUsername !== "admin" || inputPassword !== "admin") {
-      setShow(true);
-    }
+    console.log(`Username: ${inputUsername}, Password: ${inputPassword}`);
+    // Sign-in logic goes here.
+    // Documentation: Implement sign-in logic to authenticate the user.
+    // If authentication fails, setShow(true) to display the alert.
+    // Example:
+    // if (inputUsername !== "admin" || inputPassword !== "admin") {
+    //   setShow(true);
+    // }
     setLoading(false);
   };
 
-  const handlePassword = () => {};
+  const handlePassword = () => {
+    // Documentation: Implement forgot password logic.
+  };
 
   function delay(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
   return (
-    <div
-      className="sign-in__wrapper"
-    >
+    <div className="sign-in__wrapper">
       {/* Overlay */}
       <div className="sign-in__backdrop"></div>
       {/* Form */}
@@ -43,8 +46,8 @@ const Login = () => {
           alt="logo"
         />
         <div className="h4 mb-2 text-center">Sign In</div>
-        {/* ALert */}
-        {show ? (
+        {/* Alert */}
+        {show && (
           <Alert
             className="mb-2"
             variant="danger"
@@ -53,8 +56,6 @@ const Login = () => {
           >
             Incorrect username or password.
           </Alert>
-        ) : (
-          <div />
         )}
         <Form.Group className="mb-2" controlId="username">
           <Form.Label>Username</Form.Label>
@@ -79,16 +80,10 @@ const Login = () => {
         <Form.Group className="mb-2" controlId="checkbox">
           <Form.Check type="checkbox" label="Remember me" />
         </Form.Group>
-        {!loading ? (
-          <Button className="w-100" variant="primary" type="submit">
-            Log In
-          </Button>
-        ) : (
-          <Button className="w-100" variant="primary" type="submit" disabled>
-            Logging In...
-          </Button>
-        )}
-        <div className="d-grid justify-content-end">
+        <Button className="w-100" variant="primary" type="submit" disabled={loading}>
+          {loading ? "Logging In..." : "Log In"}
+        </Button>
+        <div className="d-grid justify-content-end mt-2">
           <Button
             className="text-muted px-0"
             variant="link"
