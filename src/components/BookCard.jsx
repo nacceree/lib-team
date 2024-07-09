@@ -8,7 +8,7 @@ const BookCard = ({ category, book }) => (
       variant="top" 
       src={book.cover} 
       alt={book.title} 
-      style={{ height: '300px', objectFit: 'cover' }} 
+      style={{ height: '350px', objectFit: 'obtain' }} 
     />
     <Card.Body>
       <Card.Title>{book.title}</Card.Title>

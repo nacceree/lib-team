@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const CustomNavbar = () => {
   return (
-    <Navbar expand="lg" className="navbar-custom">
+    <Navbar expand="lg" className="sticky-top navbar-custom">
       <Container fluid>
         <Navbar.Brand as={Link} to="/" className="navbar-brand-custom">Logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

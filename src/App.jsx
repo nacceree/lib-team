@@ -7,6 +7,7 @@ import AllBooks from './pages/AllBooks';
 import NotFound from './pages/NotFound'
 import CategoryBooks from './pages/CategoryBooks'
 import OneBook from './components/OneBook';
+import Login from './components/Login'
 
 
 const router = createBrowserRouter(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
     <Route path='/allbooks/:category/:bookId' element={<OneBook />} />
     <Route path='*' element={<NotFound />} />
     <Route path="/allbooks/:categoryName" element={<CategoryBooks />} />
+    <Route path='/login' element={<Login />} />
   </Route>
   )
 );
