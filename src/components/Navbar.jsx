@@ -1,27 +1,77 @@
-import React from 'react';
-import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
-import '../assets/css/navbar.css';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Card, Button, Row, Col, Container } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import books from '../books'; // Importez le fichier JSON
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoMdContact } from "react-icons/io";
+import './Navbar.css'; // Import the CSS file
 
-const CustomNavbar = () => {
+const BookCard = ({ category, book }) => {
   return (
-    <Navbar expand="lg" className="sticky-top navbar-custom">
-      <Container fluid>
-        <Navbar.Brand as={Link} to="/" className="navbar-brand-custom">Logo</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Form className="d-flex ms-auto">
-            <FormControl type="search" placeholder="Search" className="mr-2" aria-label="Search" />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-          <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/addbook" className="navbar-link-custom">Add Book</Nav.Link>
-            <Nav.Link as={Link} to="/login" className="navbar-link-custom">Login</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <Card style={{ width: '18rem' }} className="mb-4 shadow-sm">
+      {book.cover && (
+        <Card.Img 
+          variant="top" 
+          src={book.cover} 
+          alt={book.title} 
+          style={{ height: '300px', objectFit: 'cover' }} 
+        />
+      )}
+      <Card.Body>
+        <Card.Title>{book.title}</Card.Title>
+        {book.author && <Card.Text>Author: {book.author}</Card.Text>}
+        <Link to={`/allbooks/${category}/${book.id}`}>
+          <Button variant="primary">View Details</Button>
+        </Link>
+      </Card.Body>
+    </Card>
   );
-}
+};
 
-export default CustomNavbar;
+const Header = () => {
+  const [search, setSearch] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    navigate('/search', { state: { search } });
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
+  return (
+    <>
+      <div className='navbar'>
+        <img src="/logo.png" alt="Logo" className='logo'/>
+        <div className='search-box'>
+          <input
+            type="text"
+            placeholder="Search..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            onKeyPress={handleKeyPress}
+          />
+          <img
+            src="/icon_search.png"
+            alt="Search Icon"
+            className='search-icon'
+            onClick={handleSearch}
+          />
+        </div>
+        <IoSettingsOutline className='r-icon' />
+        <IoMdContact className='r-icon2' />
+      </div>
+    
+      <Container >
+        {/* Your existing content here, if necessary */}
+      </Container>
+    </>
+  );
+//___________________
+};
+
+export default Header;
