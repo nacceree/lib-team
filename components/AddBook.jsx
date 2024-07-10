@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 
 const AddBook = () => {
+
+
   const [bookImage, setBookImage] = useState(null);
   const [bookName, setBookName] = useState("");
   const [bookAuthor, setBookAuthor] = useState("");
   const [bookDescription, setBookDescription] = useState("");
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -15,8 +18,8 @@ const AddBook = () => {
       bookAuthor,
       bookDescription,
     });
-
   };
+
 
   return (
     <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
@@ -61,7 +64,7 @@ const AddBook = () => {
           />
         </Form.Group>
         <Button variant="primary" type="submit" className="w-100">
-          ADD BOOK
+          Add Book
         </Button>
       </Form>
     </Container>

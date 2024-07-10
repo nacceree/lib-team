@@ -9,7 +9,9 @@ import CategoryBooks from './pages/CategoryBooks'
 import OneBook from './components/OneBook';
 import AddBook from './components/AddBook';
 import Login from './components/Login'
+import SearchResult from './components/SearchResult';
 
+//  <Route path="/search/:SearchName" component={SearchResult} />
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +22,7 @@ const router = createBrowserRouter(
     <Route path='*' element={<NotFound />} />
     <Route path="/allbooks/:categoryName" element={<CategoryBooks />} />
     <Route path='/login' element={<Login />} />
+    <Route path="search/:SearchName" element={<SearchResult />} />
     <Route path='/addbook' element={<AddBook />} />
   </Route>
   )
