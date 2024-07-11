@@ -1,0 +1,32 @@
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.footer {
+  background-color: #2B3A42;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+.footer-icons a:hover {
+  opacity: 0.7;
+}
+.footer-icons a {
+  transition: opacity 0.3s ease;
+}
+
+.footer-icons a {
+  transition: opacity 0.3s ease;
+}
