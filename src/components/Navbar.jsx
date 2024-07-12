@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import '../assets/css/navbar.css';
 import { useNavigate, Link } from 'react-router-dom';
 import logo from '../assets/images/logowa.png'
-
-
-
 
 const CustomNavbar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -29,14 +26,12 @@ const CustomNavbar = () => {
             alt="Logo"
             className="d-inline-block align-top navbar-logo"
           />
-        </Navbar.Brand>        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            {/* Add any left-aligned links here if needed */}
-          </Nav>
-          <div className='botona' >
-            <form className="search-form mx-auto" onSubmit={handleSearch}>
-              <input
+        <div className="lmochkila navbar-center">
+            <Form className="d-flex search-form" onSubmit={handleSearch}>
+              <FormControl
                 type="search"
                 placeholder="Search Anything...."
                 className="search-input"
@@ -44,14 +39,15 @@ const CustomNavbar = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 aria-label="Search"
               />
-              <button type="submit" className="search-button">
+              <Button type="submit" className="search-button">
                 <i className="fas fa-search"></i> Search
-              </button>
-            </form>
-          </div>
-          <Nav className="ms-auto">
+              </Button>
+            </Form>
+        </div>
+          <Nav>
+            <Nav.Link as={Link} to="/addbook" className="navbar-link-custom">Favorite</Nav.Link>
             <Nav.Link as={Link} to="/addbook" className="navbar-link-custom">Add Book</Nav.Link>
-            <Nav.Link as={Link} to="/login" className="navbar-link-custom">Login</Nav.Link>
+            <Nav.Link as={Link} to="/login" className="logina navbar-link-custom px-3">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 
 
 const Fakelist = [
-  { id: 1, name: "Adventure", color: "#FF6B6B", icon: "🚀" },
-  { id: 2, name: "Romance", color: "#FF8CC8", icon: "💖" },
-  { id: 3, name: "Thriller", color: "#4ECDC4", icon: "🔪" },
-  { id: 4, name: "Memoir", color: "#A06CD5", icon: "📖" },
-  { id: 5, name: "Travel", color: "#45B7D1", icon: "🌍" },
-  { id: 6, name: "Health", color: "#6BCB77", icon: "🍏" },
-  { id: 7, name: "Poetry", color: "#F7B267", icon: "📝" },
-  { id: 8, name: "Cooking", color: "#FF8CC8", icon: "🍴" }
+  { id: 1, name: "Adventure", color: "#2B3A42", icon: "🚀" },
+  { id: 2, name: "Romance", color: "#2B3A42", icon: "💖" },
+  { id: 3, name: "Thriller", color: "#2B3A42", icon: "🔪" },
+  { id: 4, name: "Memoir", color: "#2B3A42", icon: "📖" },
+  { id: 5, name: "Travel", color: "#2B3A42", icon: "🌍" },
+  { id: 6, name: "Health", color: "#2B3A42", icon: "🍏" },
+  { id: 7, name: "Poetry", color: "#2B3A42", icon: "📝" },
+  { id: 8, name: "Cooking", color: "#2B3A42", icon: "🍴" }
 ];
 
 const Allcategories = () => {
@@ -34,7 +34,7 @@ const Allcategories = () => {
       <Row className="mt-5">
         <Col className="text-center">
           <Link to="/allbooks">
-            <Button variant="primary" size="lg">
+            <Button style={{ backgroundColor: "#E74C3C", border: "none" }} variant="primary" size="lg">
               Explore All Books
             </Button>
           </Link>

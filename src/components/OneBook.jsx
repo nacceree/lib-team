@@ -34,7 +34,7 @@ const OneBook = () => {
               />
             </div>
           </Card>
-          <Button variant="danger" className="my-3" style={{ width: '100%' }}>Delete Book</Button>
+          <Button variant="danger" className="my-3" style={{ width: '100%' }}>Delete Book only qd;in-</Button>
         </Col>
         <Col md={8}>
           <h1 className="mb-3" style={{ fontWeight: 'bold' }}>{book.title}</h1>
