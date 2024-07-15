@@ -14,7 +14,7 @@
 }
 
 .login-title {
-  color: #0e79aa;
+  color: #070707;
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
@@ -27,12 +27,12 @@
 }
 
 .login-input:focus {
-  border-color: #0e79aa;
+  border-color: #E74C3C;
   box-shadow: 0 0 0 0.2rem rgba(14, 121, 170, 0.25);
 }
 
 .login-button {
-  background-color: #0e79aa;
+  background-color: #E74C3C;
   border: none;
   padding: 10px 0;
   font-size: 1.1rem;
@@ -41,7 +41,7 @@
 }
 
 .login-button:hover:not(:disabled) {
-  background-color: #0c6a95;
+  background-color: #950c0c;
 }
 
 .login-button:disabled {

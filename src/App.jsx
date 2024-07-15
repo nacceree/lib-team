@@ -10,8 +10,8 @@ import OneBook from './components/OneBook';
 import AddBook from './components/AddBook';
 import Login from './components/Login'
 import SearchResults from './components/SearchResult';
+import AboutUs from './components/AboutUS'
 
-//  <Route path="/search/:SearchName" component={SearchResult} />
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +24,7 @@ const router = createBrowserRouter(
     <Route path='/login' element={<Login />} />
     <Route path="/search" element={<SearchResults />} />
     <Route path='/addbook' element={<AddBook />} />
+    <Route path='/aboutus' element={<AboutUs />} />
   </Route>
   )
 );

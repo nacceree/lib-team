@@ -22,7 +22,7 @@ const AddBook = () => {
 
 
   return (
-    <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
+    <Container className="d-flex justify-content-center align-items-center my-5" style={{ Height: "100vh" }}>
       <Form className="shadow p-4 bg-white rounded" style={{ width: "100%", maxWidth: "400px" }} onSubmit={handleSubmit}>
         <h2 className="text-center mb-4" style={{ color: '#333', fontWeight: 'bold' }}>Add New Book</h2>
         <Form.Group className="mb-3" controlId="formBookImage">
@@ -63,7 +63,7 @@ const AddBook = () => {
             required 
           />
         </Form.Group>
-        <Button variant="primary" type="submit" className="w-100">
+        <Button style={{ backgroundColor: "#E74C3C", borderColor: "#E74C3C" }} variant="primary" type="submit" className="w-100">
           Add Book
         </Button>
       </Form>
