@@ -1,5 +1,5 @@
 ```markdown
-# 📚 BookWorm - Online Book Store and Community
+# 📚 EBook - Online Book Store and Community
 
 [Technologies Getting Started](#technologies-getting-started)
 
