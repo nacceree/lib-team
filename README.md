@@ -8,7 +8,7 @@ A comprehensive web application for book enthusiasts to discover, read, delete a
 ## 👥  Authors
 - Hafsa [ (Login/Sign Up Pages never been delivered) ]
 - Yasser Assou [ Footer + About Us + Book page ]
-- Youssef El Melh( Add Book page / (Contact us page not delivered yet))
+- Youssef El Melh( Add Book page / Contact us page)
 - Abdennacer Kaddouri
 
 ## 🎨 Layout
